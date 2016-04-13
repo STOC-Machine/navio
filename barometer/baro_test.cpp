@@ -11,7 +11,8 @@ using namespace std;
 int main()
 {
   MS5611* barometer = new MS5611;
-  assert(barometer != NULL) {
+  // assert(barometer != NULL);
+  if (!barometer) {
     cerr << "ERROR: Could not allocate memory MS5611 device." << endl;
     return -1;
   }
