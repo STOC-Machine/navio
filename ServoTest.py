@@ -30,12 +30,12 @@ while (cycles > 0):
 	cycles -= 1
 	# Now we alternate all motors between fast and slow 
 	for pwm in pwmArray:
-    	pwm.set_duty_cycle(SERVO_MIN)
-    # They will keep spinning until we send a new signal
-    time.sleep(1)
-    for pwm in pwmArray:
-    	pwm.set_duty_cycle(SERVO_MAX)
-    time.sleep(1)
+    		pwm.set_duty_cycle(SERVO_MIN)
+    	# They will keep spinning until we send a new signal
+   	time.sleep(1)
+    	for pwm in pwmArray:
+    		pwm.set_duty_cycle(SERVO_MAX)
+    	time.sleep(1)
 
 # So even if you terminate the script, they will keep spinning
 # We have to send a stop signal to every motor before we leave
